@@ -49,9 +49,9 @@ console.log(squadreCalcio);
 // - Infine, creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
 const squadreFalli = [];
 
-for (const squadreTemp of squadreCalcio) {
+for (const squadreTemp of squadreCalcio) {  // creo una variabile temporanea per l'elemento corrente ciclico 
     squadreFalli.push({
-        nome: squadreTemp.nome,
+        nome: squadreTemp.nome,             // pusho quello che mi serve creando un nuovo oggetto nell'array vuoto
         falliSubiti: squadreTemp.falliSubiti
     });
 }
