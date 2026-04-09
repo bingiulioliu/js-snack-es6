@@ -10,7 +10,8 @@ const biciDaCorsa = [
     },
     { 
         nome: "Trek Emonda SLR 9", 
-        peso: 6.2 },
+        peso: 6.2 
+    },
     { 
         nome: "Cannondale SuperSix EVO Lab71", 
         peso: 6.8 
@@ -29,10 +30,12 @@ const biciDaCorsa = [
     },
     { 
         nome: "Giant TCR Advanced SL 0", 
-        peso: 6.4 },
+        peso: 6.4 
+    },
     { 
         nome: "Wilier Filante SLR", 
-        peso: 6.8 },
+        peso: 6.8 
+    },
     { 
         nome: "Bianchi Specialissima RC", 
         peso: 6.6 
@@ -42,3 +45,16 @@ const biciDaCorsa = [
         peso: 6.7 
     }
 ];
+
+console.log(`La bici ${biciDaCorsa[1].nome} pesa meno: ${biciDaCorsa[1].peso}`);
+
+// creo una variabile contenitore
+let biciLeggera = biciDaCorsa[0];
+
+// ciclo for per ricerca e scrematura
+for (const biciTemp of biciDaCorsa) {
+    if (biciTemp.peso < biciLeggera.peso) { // confronto la bici attuale con tutte le altre 
+        biciLeggera = biciTemp;             // per sostituirla ogni volta che ha il peso minore
+    }
+}
+console.log(`La bici più leggera è la: ${biciLeggera.nome}`);
