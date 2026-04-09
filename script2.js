@@ -33,6 +33,15 @@ const squadreCalcio = [
 // - Generare numeri random al posto degli 0 nelle proprietà “punti” fatti e “falli subiti”.
 
 //Funzione randomizzatore
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
+// Ciclo for x5 per modificare punti e falli
+for (let i = 0; i < 5; i++) {
+    console.log(squadreCalcio[i].puntiFatti = getRandomInt(0, 10));
+    console.log(squadreCalcio[i].falliSubiti = getRandomInt(0, 10));
+    
+}
 
 // - Infine, creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
